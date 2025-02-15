@@ -1,12 +1,20 @@
+import multiprocessing
 from SoccerNet.Downloader import SoccerNetDownloader
 
-# Define the directory to save videos
 downloader = SoccerNetDownloader(LocalDirectory="./data/soccer_videos")
+downloader.password = "s0cc3rn3t"
 
-# List of available competitions (example: English Premier League)
-competitions = ['england_epl', 'france_ligue-1', 'spain_laliga']
+train_videos = [f"{i}_224p.mkv" for i in range(1, 11)]
+test_videos = [f"{i}_224p.mkv" for i in range(11, 14)]
 
-# Download videos for the selected competitions
-downloader.downloadGames(competitions)
+def download_video(video_file, split):
+    downloader.downloadGames(files=[video_file], split=[split])
 
-print("Download complete!")
+if __name__ == "__main__":
+    pool = multiprocessing.Pool(processes=6)  # Adjust based on CPU
+    tasks = [(video, "train") for video in train_videos] + [(video, "test") for video in test_videos]
+    pool.starmap(download_video, tasks)
+    pool.close()
+    pool.join()
+    
+print("✅ Faster parallel download completed!")
