@@ -6,7 +6,7 @@ with open("phase2_raw_positions.json") as f:
     frames = json.load(f)
 
 def distance(p1, p2):
-    return math.hypot(p1[0]-p2[0], p1[1]-p2[1])
+    return math.hypot(p1[0] - p2[0], p1[1] - p2[1])
 
 def get_closest_player(ball, players, team_name):
     min_dist = float("inf")
@@ -16,12 +16,16 @@ def get_closest_player(ball, players, team_name):
         if d < min_dist:
             min_dist = d
             closest_idx = idx
-    return f"Player_{closest_idx+1}_{team_name}", min_dist
+    return f"Player_{closest_idx + 1}_{team_name}", min_dist
 
 event_output = []
 prev_possession = None
 prev_ball = None
 last_pass = {}
+
+# Accurate goal post Y range for 720px height (7.32m ≈ 82px)
+goal_y_min = 720 / 2 - 41
+goal_y_max = 720 / 2 + 41
 
 for frame in frames:
     ball = frame["ball"]
@@ -46,14 +50,14 @@ for frame in frames:
     else:
         possession = None
 
-    # Detect events
+    # Detect passes and tackles
     if possession and prev_possession and possession != prev_possession:
         event = "tackle"
         to = by
         by = last_pass.get(prev_possession, None)
 
     elif possession and possession == prev_possession:
-        if prev_ball and distance(ball, prev_ball) > 40:  # Ball moved a lot
+        if prev_ball and distance(ball, prev_ball) > 40:
             event = "pass"
             to = by
             by = last_pass.get(possession, None)
@@ -61,12 +65,18 @@ for frame in frames:
     if possession:
         last_pass[possession] = by
 
-    # Goal logic
-    if ball[0] <= 10 or ball[0] >= 1592:
+    # 🟩 Accurate goal logic based on x & y range
+    if ball[0] <= 0 and goal_y_min <= ball[1] <= goal_y_max:
         event = "goal"
+        by = last_pass.get("B", None)  # team_A scored
         to = None
 
-    # Save event if detected
+    elif ball[0] >= 1180 and goal_y_min <= ball[1] <= goal_y_max:
+        event = "goal"
+        by = last_pass.get("A", None)  # team_B scored
+        to = None
+
+    # Save event
     if event:
         event_output.append({
             "timestamp": frame["timestamp"],
