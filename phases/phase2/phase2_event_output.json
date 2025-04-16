@@ -1,0 +1,24 @@
+[
+    {
+        "timestamp": "00:00:01.080",
+        "frame": 3,
+        "ball": [
+            700,
+            365
+        ],
+        "event": "tackle",
+        "by": "Player_1_A",
+        "to": "Player_1_B"
+    },
+    {
+        "timestamp": "00:00:01.120",
+        "frame": 4,
+        "ball": [
+            0,
+            360
+        ],
+        "event": "goal",
+        "by": "Player_1_A",
+        "to": null
+    }
+]

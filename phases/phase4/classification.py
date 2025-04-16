@@ -33,6 +33,7 @@ def classify_team_strategy(raw_players):
     
     for player_dict in raw_players:
         for name, data in player_dict.items():
+            print(data)
             data["name"] = name
             data["playstyle"] = classify_playstyle(data)
             players.append(data)
@@ -74,8 +75,7 @@ def classify_team_strategy(raw_players):
     }
 
 if __name__ == "__main__":
-    with open("phase4_contri_data.json", "r") as f:
+    with open("../phase2.5/player_stats.json", "r") as f:
         data = json.load(f)
-    
     result = classify_team_strategy(data)
     print(json.dumps(result, indent=4))

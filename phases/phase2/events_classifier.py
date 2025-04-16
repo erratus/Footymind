@@ -2,7 +2,7 @@ import json
 import math
 
 # Load positional data
-with open("phase2_raw_positions.json") as f:
+with open("../phase1/phase1_output.json") as f:
     frames = json.load(f)
 
 def distance(p1, p2):
@@ -65,15 +65,14 @@ for frame in frames:
     if possession:
         last_pass[possession] = by
 
-    # 🟩 Accurate goal logic based on x & y range
+    # Goal logic
     if ball[0] <= 0 and goal_y_min <= ball[1] <= goal_y_max:
         event = "goal"
-        by = last_pass.get("B", None)  # team_A scored
+        by = last_pass.get("B", None)
         to = None
-
     elif ball[0] >= 1180 and goal_y_min <= ball[1] <= goal_y_max:
         event = "goal"
-        by = last_pass.get("A", None)  # team_B scored
+        by = last_pass.get("A", None)
         to = None
 
     # Save event
