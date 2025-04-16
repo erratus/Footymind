@@ -1,4 +1,5 @@
 phase1 -> frames to ocr -> players positional data
-phase2 -> positional data to xy coordinates -> events data 
+phase2 -> positional data to xy coordinates -> events data
+phase2.5 -> events data -> aggregation per player
 phase3 -> events data to aggregation data /per 10 minutes -> aggregation to weighted contribution
 phase4 -> contribution to playstyle data -> strategies and recomended playstyle 
