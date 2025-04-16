@@ -28,22 +28,19 @@ def classify_playstyle(p):
         return "Unclassified"
 
 # 🔹 Step 2: Classify Team Strategy
-def classify_team_strategy(raw_players):
+def classify_team_strategy(player_dict):  # changed param name for clarity
     players = []
-    
-    for player_dict in raw_players:
-        print()
-        for name, data in player_dict.items():
-            
-            data["name"] = name
-            data["playstyle"] = classify_playstyle(data)
-            players.append(data)
+
+    for name, data in player_dict.items():
+        data["name"] = name
+        data["playstyle"] = classify_playstyle(data)
+        players.append(data)
 
     style_count = Counter(p["playstyle"] for p in players)
     avg_team_speed = sum(p['avg_speed'] for p in players) / len(players)
     mvp = max(players, key=lambda x: x['contribution_score'])
 
-    # Team strategy logic
+    # Team strategy logic (unchanged)
     if style_count["Creative Midfielder"] >= 2 and style_count["Striker/Finisher"] >= 1:
         strategy = "Strategy 1: Play through center with short passes, isolate striker for scoring"
     elif style_count["Supportive Winger"] >= 2 and style_count["Box-to-Box"] >= 1:
@@ -80,4 +77,5 @@ if __name__ == "__main__":
         data = json.load(f)
     print(data)
     result = classify_team_strategy(data)
-    print(json.dumps(result, indent=4))
+    with open("player_class_impact_output.json", "w") as f:
+        json.dump(result, f, indent=4)
