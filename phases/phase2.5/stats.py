@@ -2,15 +2,15 @@ import json
 import math
 from collections import defaultdict
 
-# Load the simulated match data
+# Load the match event data
 with open("realistic_synthetic_match.json", "r") as f:
     match_data = json.load(f)
 
 # Parameters
-DISTANCE_THRESHOLD = 50  # Max distance to count as "manned"
+DISTANCE_THRESHOLD = 50  # Distance threshold to count as "manned"
 FPS = 50  # Frames per second
 
-# Dictionary to store stats for each player
+# Player stats dictionary
 player_stats = defaultdict(lambda: {
     "total_distance": 0,
     "frames_moved": 0,
@@ -20,66 +20,71 @@ player_stats = defaultdict(lambda: {
     "tackles_done": 0
 })
 
-# Track previous positions of players
+# To track previous positions of each player
 previous_positions = {}
 
-# Process match data
+# Loop through each frame
 for frame_data in match_data:
+    # Skip if no 'players' key — event-only frame
     if "players" not in frame_data:
-        continue  # Skip events-only entries
+        continue
 
-    players = frame_data["players"]
+    all_players = []
+    for team_key in ["team_A", "team_B"]:
+        for idx, (x, y) in enumerate(frame_data["players"].get(team_key, [])):
+            player_id = f"Player_{idx+1}_{'A' if team_key == 'team_A' else 'B'}"
+            all_players.append({"id": player_id, "x": x, "y": y})
+
     ball = frame_data["ball"]
 
-    # Compute movement and manning
-    for player in players:
+    # Calculate movement + manned detection
+    for player in all_players:
         player_id = player["id"]
         x, y = player["x"], player["y"]
 
-        # Calculate speed
+        # Speed tracking
         if player_id in previous_positions:
             prev_x, prev_y = previous_positions[player_id]
-            distance_moved = math.sqrt((x - prev_x) ** 2 + (y - prev_y) ** 2)
-            player_stats[player_id]["total_distance"] += distance_moved
+            dist = math.hypot(x - prev_x, y - prev_y)
+            player_stats[player_id]["total_distance"] += dist
             player_stats[player_id]["frames_moved"] += 1
-        
-        previous_positions[player_id] = (x, y)  # Update position
 
-        # Check if the player is manned (close to another player)
-        for other_player in players:
-            if other_player["id"] != player_id:
-                other_x, other_y = other_player["x"], other_player["y"]
-                distance = math.sqrt((x - other_x) ** 2 + (y - other_y) ** 2)
-                if distance < DISTANCE_THRESHOLD:
+        previous_positions[player_id] = (x, y)
+
+        # Manned logic: Is any opponent within threshold?
+        for other in all_players:
+            if other["id"] != player_id and player_id[-1] != other["id"][-1]:  # Different teams
+                dist = math.hypot(x - other["x"], y - other["y"])
+                if dist < DISTANCE_THRESHOLD:
                     player_stats[player_id]["times_manned"] += 1
-                    break  # Only count one manning per frame
+                    break
 
-    # Process events
+    # Event Processing (based on updated format)
     if "event" in frame_data:
         event = frame_data["event"]
-        if event == "pass":
-            player_stats[frame_data["player"]]["passes_done"] += 1
-        elif event == "tackle":
-            # Randomly assign the tackle to a nearby player
-            tackled_player = min(players, key=lambda p: math.sqrt((p["x"] - ball["x"])**2 + (p["y"] - ball["y"])**2))
-            player_stats[tackled_player["id"]]["tackles_done"] += 1
-        elif event in ["home_goal", "opponent_goal"]:
-            if ball["owner"]:
-                player_stats[ball["owner"]]["goals_scored"] += 1
+        by = frame_data.get("by")
+        to = frame_data.get("to")
 
-# Compute final stats
-for player_id, stats in player_stats.items():
+        if event == "pass" and by:
+            player_stats[by]["passes_done"] += 1
+        elif event == "tackle" and by:
+            player_stats[by]["tackles_done"] += 1
+        elif event == "goal" and by:
+            player_stats[by]["goals_scored"] += 1
+
+# Finalize stats: average speed calculation
+for pid, stats in player_stats.items():
     if stats["frames_moved"] > 0:
-        stats["avg_speed"] = (stats["total_distance"] / stats["frames_moved"]) * FPS
+        stats["avg_speed"] = round((stats["total_distance"] / stats["frames_moved"]) * FPS, 4)
     else:
-        stats["avg_speed"] = 0  # Player never moved
+        stats["avg_speed"] = 0.0
 
-    # Remove unnecessary fields
+    # Remove movement-related internals
     del stats["total_distance"]
     del stats["frames_moved"]
 
-# Save aggregated data
+# Save to JSON
 with open("player_stats.json", "w") as f:
     json.dump(player_stats, f, indent=4)
 
-print("Player statistics saved to 'player_stats.json'.")
+print("✅ Player statistics saved to 'player_stats.json'")
