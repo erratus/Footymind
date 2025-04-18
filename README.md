@@ -26,7 +26,6 @@
 
 - Automate tactical match analysis.
 - Convert raw video data into actionable insights.
-- Lay foundation for advanced analytics (e.g., heatmaps, pass networks).
 
 ---
 
