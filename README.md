@@ -6,7 +6,7 @@
 
 ## 📌 Features
 
-- 🔍 **YOLOv8 Object Detection** for:
+- 🔍 **YOLOv5 Object Detection** for:
   - Team A players (white circles)
   - Team B players (black triangles)
   - Ball (circle)
@@ -42,4 +42,5 @@
 ---
 
 ## 📂 Folder Structure
+FOOTYMIND/ │ ├── model/ # Object detection components │ ├── images/ # Sample images │ ├── input/ # Frame-wise input images │ ├── labels/ # YOLO-style label files │ ├── yolov5/ # YOLOv5 model directory │ ├── data.yaml # Dataset configuration for training │ ├── helper.py # Object parsing and frame utilities │ ├── helper1.py # (Possibly backup/extended helper) │ ├── runner.py # Script to run detection & output │ ├── output.json # Raw positional output (if any) │ └── output1.json # Cleaned positional output │ ├── phases/ │ ├── phase1/ # Tracking logic & player indexing │ └── phase2/ # Event classification logic │ ├── venv/ # Python virtual environment ├── .gitignore ├── README.md ├── requirements.txt
 
