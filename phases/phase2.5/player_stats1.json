@@ -1,0 +1,16 @@
+{
+    "Player_10_A": {
+        "times_manned": 0,
+        "goals_scored": 0,
+        "passes_done": 0,
+        "tackles_done": 4,
+        "avg_speed": 0.0
+    },
+    "Player_7_A": {
+        "times_manned": 0,
+        "goals_scored": 25,
+        "passes_done": 0,
+        "tackles_done": 0,
+        "avg_speed": 0.0
+    }
+}

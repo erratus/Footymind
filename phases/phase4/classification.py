@@ -77,5 +77,5 @@ if __name__ == "__main__":
         data = json.load(f)
     print(data)
     result = classify_team_strategy(data)
-    with open("player_class_impact_output.json", "w") as f:
+    with open("player_class_impact_output1.json", "w") as f:
         json.dump(result, f, indent=4)

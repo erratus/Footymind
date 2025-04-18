@@ -1,0 +1,16 @@
+{
+    "Player_Styles": {
+        "Player_1_A": "Unclassified",
+        "Player_2_A": "Unclassified"
+    },
+    "Playstyle_Counts": {
+        "Unclassified": 2
+    },
+    "Avg_Team_Speed": 0.0,
+    "MVP": {
+        "name": "Player_1_A",
+        "contribution_score": 52,
+        "playstyle": "Unclassified"
+    },
+    "Recommended_Strategy": "No dominant strategy match \u2013 fallback: Balanced approach"
+}

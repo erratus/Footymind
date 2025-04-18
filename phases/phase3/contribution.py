@@ -65,5 +65,5 @@ with open("../phase2.5/player_stats.json", "r") as f:
 
 
 result = full_match_projection(data, current_minute=30)
-with open("player_contri_output.json", "w") as f:
+with open("player_contri_output1.json", "w") as f:
     json.dump(result, f, indent=4)

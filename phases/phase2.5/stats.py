@@ -3,7 +3,7 @@ import math
 from collections import defaultdict
 
 # Load the match event data
-with open("../phase2/phase2_event_output.json", "r") as f:
+with open("../phase2/phase2_event_output1.json", "r") as f:
     match_data = json.load(f)
 
 # Parameters
@@ -81,7 +81,7 @@ for pid, stats in player_stats.items():
     del stats["frames_moved"]
 
 # Save to JSON
-with open("player_stats.json", "w") as f:
+with open("player_stats1.json", "w") as f:
     json.dump(player_stats, f, indent=4)
 
 print("✅ Player statistics saved to 'player_stats.json'")

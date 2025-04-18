@@ -1,0 +1,321 @@
+[
+    {
+        "timestamp": "0:00:01.375000",
+        "frame": 34,
+        "ball": [
+            1088.0,
+            663.0
+        ],
+        "event": "tackle",
+        "by": "Player_10_A",
+        "to": "Player_1_B"
+    },
+    {
+        "timestamp": "0:00:01.416000",
+        "frame": 35,
+        "ball": [
+            1088.0,
+            659.0
+        ],
+        "event": "tackle",
+        "by": "Player_10_A",
+        "to": "Player_10_A"
+    },
+    {
+        "timestamp": "0:00:01.458000",
+        "frame": 36,
+        "ball": [
+            1096.0,
+            663.0
+        ],
+        "event": "tackle",
+        "by": "Player_10_A",
+        "to": "Player_1_B"
+    },
+    {
+        "timestamp": "0:00:01.500000",
+        "frame": 37,
+        "ball": [
+            1104.0,
+            659.0
+        ],
+        "event": "tackle",
+        "by": "Player_10_A",
+        "to": "Player_10_A"
+    },
+    {
+        "timestamp": "0:00:11.458000",
+        "frame": 276,
+        "ball": [
+            1326.0,
+            390.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.500000",
+        "frame": 277,
+        "ball": [
+            1328.0,
+            388.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.541000",
+        "frame": 278,
+        "ball": [
+            1328.0,
+            390.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.583000",
+        "frame": 279,
+        "ball": [
+            1327.0,
+            391.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.625000",
+        "frame": 280,
+        "ball": [
+            1327.0,
+            389.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.666000",
+        "frame": 281,
+        "ball": [
+            1322.0,
+            379.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.708000",
+        "frame": 282,
+        "ball": [
+            1324.0,
+            380.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.750000",
+        "frame": 283,
+        "ball": [
+            1322.0,
+            384.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.791000",
+        "frame": 284,
+        "ball": [
+            1324.0,
+            389.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.833000",
+        "frame": 285,
+        "ball": [
+            1314.0,
+            383.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.875000",
+        "frame": 286,
+        "ball": [
+            1316.0,
+            381.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.916000",
+        "frame": 287,
+        "ball": [
+            1311.0,
+            381.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:11.958000",
+        "frame": 288,
+        "ball": [
+            1311.0,
+            384.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "00:00:12.000",
+        "frame": 289,
+        "ball": [
+            1311.0,
+            379.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.041000",
+        "frame": 290,
+        "ball": [
+            1308.0,
+            384.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.083000",
+        "frame": 291,
+        "ball": [
+            1310.0,
+            385.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.125000",
+        "frame": 292,
+        "ball": [
+            1309.0,
+            380.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.166000",
+        "frame": 293,
+        "ball": [
+            1304.0,
+            383.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.208000",
+        "frame": 294,
+        "ball": [
+            1302.0,
+            383.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.250000",
+        "frame": 295,
+        "ball": [
+            1303.0,
+            385.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.291000",
+        "frame": 296,
+        "ball": [
+            1301.0,
+            381.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.333000",
+        "frame": 297,
+        "ball": [
+            1301.0,
+            381.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.375000",
+        "frame": 298,
+        "ball": [
+            1295.0,
+            381.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.416000",
+        "frame": 299,
+        "ball": [
+            1293.0,
+            375.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    },
+    {
+        "timestamp": "0:00:12.458000",
+        "frame": 300,
+        "ball": [
+            1295.0,
+            385.0
+        ],
+        "event": "goal",
+        "by": "Player_7_A",
+        "to": null
+    }
+]
