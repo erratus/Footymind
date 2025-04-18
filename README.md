@@ -42,5 +42,26 @@
 ---
 
 ## 📂 Folder Structure
-FOOTYMIND/ │ ├── model/ # Object detection components │ ├── images/ # Sample images │ ├── input/ # Frame-wise input images │ ├── labels/ # YOLO-style label files │ ├── yolov5/ # YOLOv5 model directory │ ├── data.yaml # Dataset configuration for training │ ├── helper.py # Object parsing and frame utilities │ ├── helper1.py # (Possibly backup/extended helper) │ ├── runner.py # Script to run detection & output │ ├── output.json # Raw positional output (if any) │ └── output1.json # Cleaned positional output │ ├── phases/ │ ├── phase1/ # Tracking logic & player indexing │ └── phase2/ # Event classification logic │ ├── venv/ # Python virtual environment ├── .gitignore ├── README.md ├── requirements.txt
+FOOTYMIND/ 
+│ ├── model/
+│ ├── images/ 
+│ ├── input/ 
+│ ├── labels/ 
+│ ├── yolov5/ 
+│ ├── data.yaml 
+│ ├── helper.py 
+│ ├── helper1.py 
+│ ├── runner.py 
+│ ├── output.json  
+│ └── output1.json 
+│ ├── phases/ 
+│ ├── phase1/ 
+│ ├── phase2/ 
+│ ├── phase2.5/ 
+│ ├── phase3/  
+│ └── phase4/
+│ ├── venv/ 
+├── .gitignore 
+├── README.md 
+├── requirements.txt
 
