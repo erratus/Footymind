@@ -73,7 +73,7 @@ def classify_team_strategy(player_dict):  # changed param name for clarity
     }
 
 if __name__ == "__main__":
-    with open("../phase2.5/player_stats.json", "r") as f:
+    with open("../phase2.5/player_stats1.json", "r") as f:
         data = json.load(f)
     print(data)
     result = classify_team_strategy(data)

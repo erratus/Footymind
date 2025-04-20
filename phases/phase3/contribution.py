@@ -48,9 +48,9 @@ def full_match_projection(input_data, current_minute):
         projected = project_stats(stats, current_minute)
         score = predict_contribution(model, projected)
         insight = (
-            "🔥 High Impact" if score > 140 else
-            "⚡ Medium Impact" if score > 110 else
-            "🧊 Low Impact"
+            " High Impact" if score > 140 else
+            " Medium Impact" if score > 110 else
+            " Low Impact"
         )
         output[player_name] = {
             "projected_stats": projected,

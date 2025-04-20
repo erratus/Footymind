@@ -1,16 +1,17 @@
 {
     "Player_Styles": {
-        "Player_1_A": "Unclassified",
-        "Player_2_A": "Unclassified"
+        "Player_10_A": "Unclassified",
+        "Player_7_A": "Striker/Finisher"
     },
     "Playstyle_Counts": {
-        "Unclassified": 2
+        "Unclassified": 1,
+        "Striker/Finisher": 1
     },
     "Avg_Team_Speed": 0.0,
     "MVP": {
-        "name": "Player_1_A",
-        "contribution_score": 52,
-        "playstyle": "Unclassified"
+        "name": "Player_7_A",
+        "contribution_score": 250,
+        "playstyle": "Striker/Finisher"
     },
-    "Recommended_Strategy": "No dominant strategy match \u2013 fallback: Balanced approach"
+    "Recommended_Strategy": "Strategy 13: Play around MVP, keep them free of marking"
 }

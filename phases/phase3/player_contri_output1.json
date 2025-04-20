@@ -1,24 +1,24 @@
 {
-    "Player_1_A": {
+    "Player_10_A": {
         "projected_stats": {
             "times_manned": 0,
-            "goals_scored": 3.0,
+            "goals_scored": 0.0,
             "passes_done": 0,
-            "tackles_done": 3,
+            "tackles_done": 12,
             "avg_speed": 0.0
         },
-        "predicted_contribution": 169,
-        "insight": "\ud83d\udd25 High Impact"
+        "predicted_contribution": 234,
+        "insight": " High Impact"
     },
-    "Player_2_A": {
+    "Player_7_A": {
         "projected_stats": {
             "times_manned": 0,
-            "goals_scored": 3.0,
+            "goals_scored": 5.0,
             "passes_done": 0,
             "tackles_done": 0,
             "avg_speed": 0.0
         },
-        "predicted_contribution": 134,
-        "insight": "\u26a1 Medium Impact"
+        "predicted_contribution": 295,
+        "insight": " High Impact"
     }
 }
