@@ -41,26 +41,38 @@
 ---
 
 ## 📂 Folder Structure
-FOOTYMIND/ 
-│ ├── model/
-│ ├── images/ 
-│ ├── input/ 
-│ ├── labels/ 
-│ ├── yolov5/ 
-│ ├── data.yaml 
-│ ├── helper.py 
-│ ├── helper1.py 
-│ ├── runner.py 
-│ ├── output.json  
-│ └── output1.json 
-│ ├── phases/ 
-│ ├── phase1/ 
-│ ├── phase2/ 
-│ ├── phase2.5/ 
-│ ├── phase3/  
-│ └── phase4/
-│ ├── venv/ 
-├── .gitignore 
-├── README.md 
-├── requirements.txt
+FOOTYMIND/  <br>
+│ ├── data #contains data
+│ ├── model/<br>  #not added in the repository
+│ │ ├── images/ <br>
+│ │ ├── input/ <br>
+│ │ ├── labels/ <br>
+│ │ ├── yolov5/ <br>
+│ │ ├── data.yaml <br>
+│ │ ├── helper.py <br>
+│ │ ├── helper1.py <br>
+│ │ ├── runner.py <br>
+│ │ ├── output.json  <br>
+│ │ └── output1.json <br>
+│ ├── phases/ <br>
+│ │ ├── phase1/ <br>
+│ │ ├── phase2/ <br>
+│ │ ├── phase2.5/ <br>
+│ │ ├── phase3/  <br>
+│ │ └── phase4/<br>
+│ ├── venv/ <br>
+├── .gitignore <br>
+├── README.md <br>
+├── requirements.txt<br>
 
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/FootyMind.git
+cd FootyMind
+```
