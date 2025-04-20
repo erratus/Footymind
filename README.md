@@ -33,8 +33,8 @@
 
 | Component        | Tech Used            |
 |------------------|----------------------|
-| Detection        | YOLOv8 (Custom-trained) |
-| Tracking         | Hungarian Algorithm   |
+| Detection        | YOLOv5 (Custom-trained) |
+| Tracking         | Strong sort, Hungarian Algorithm   |
 | Event Analysis   | Python, NumPy, JSON   |
 | Visualization    | Matplotlib, OpenCV    |
 
