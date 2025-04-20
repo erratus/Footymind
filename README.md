@@ -76,3 +76,46 @@ FOOTYMIND/  <br>
 git clone https://github.com/yourusername/FootyMind.git
 cd FootyMind
 ```
+
+### 2. Install Dependencies
+
+```bash
+pip install numpy scipy opencv-python
+```
+### 3. Prepare YOLO Labels
+
+Place all YOLO .txt labels (per frame) inside phases/phase1/yolo_labels_raw/.
+Each line in a .txt should follow:
+
+```bash
+<class_id> <center_x> <center_y> <width> <height>
+```
+
+### 4. Train the yolov5 model 
+### 5. Run the Pipeline
+```bash
+# Step 1: Convert YOLO detections to frame-wise position JSON
+python phases/phase1/track_and_export.py
+
+# Step 2: Generate event logs from the positions
+python phases/phase2/events_classifier.py
+
+```
+
+🔮 Future Improvements
+Add offside, foul, and interception detection.
+
+Build interactive dashboard (e.g., with Streamlit).
+
+Integrate predictive models (xG, pass success rate).
+
+📜 License
+This project is licensed under the MIT License.
+
+🙌 Acknowledgements
+Ultralytics YOLOv8
+
+OpenCV & NumPy
+
+Hungarian Algorithm (via SciPy)
+
