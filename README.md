@@ -44,16 +44,6 @@
 FOOTYMIND/  <br>
 │ ├── data #contains data <br>
 │ ├── model/ #not added in the repository <br>  
-│ │ ├── images/ <br>
-│ │ ├── input/ <br>
-│ │ ├── labels/ <br>
-│ │ ├── yolov5/ <br>
-│ │ ├── data.yaml <br>
-│ │ ├── helper.py <br>
-│ │ ├── helper1.py <br>
-│ │ ├── runner.py <br>
-│ │ ├── output.json  <br>
-│ │ └── output1.json <br>
 │ ├── phases/ <br>
 │ │ ├── phase1/ <br>
 │ │ ├── phase2/ <br>
