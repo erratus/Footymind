@@ -42,7 +42,7 @@
 
 ## 📂 Folder Structure
 FOOTYMIND/  <br>
-│ ├── data #contains data
+│ ├── data #contains data <br>
 │ ├── model/<br>  #not added in the repository
 │ │ ├── images/ <br>
 │ │ ├── input/ <br>
