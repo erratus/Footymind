@@ -43,7 +43,7 @@
 ## 📂 Folder Structure
 FOOTYMIND/  <br>
 │ ├── data #contains data <br>
-│ ├── exp2/ #contains the mode <br>  
+│ ├── exp2/ #contains the modal <br>  
 │ ├── phases/ <br>
 │ │ ├── phase1/ <br>
 │ │ ├── phase2/ <br>
