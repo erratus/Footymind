@@ -43,7 +43,7 @@
 ## 📂 Folder Structure
 FOOTYMIND/  <br>
 │ ├── data #contains data <br>
-│ ├── model/ #not added in the repository <br>  
+│ ├── exp2/ #contains the mode <br>  
 │ ├── phases/ <br>
 │ │ ├── phase1/ <br>
 │ │ ├── phase2/ <br>
