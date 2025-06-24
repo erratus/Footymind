@@ -63,7 +63,7 @@ FOOTYMIND/  <br>
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/FootyMind.git
+git clone https://github.com/erratus/FootyMind.git
 cd FootyMind
 ```
 
